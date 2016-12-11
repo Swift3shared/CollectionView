@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  AppDelegate./Users/sokchanny/Documents/Course /Swift/Project/UICollectionView/UICollectionView.xcodeprojswift
 //  UICollectionView
 //
 //  Created by sok channy on 11/15/16.
@@ -16,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        // root
+        window?.rootViewController = UINavigationController(rootViewController: CustomCollectionView(collectionViewLayout: layout))
+            
+            
         return true
     }
 
